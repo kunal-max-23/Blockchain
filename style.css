@@ -1,0 +1,147 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* gradient background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Weather Card */
+.card {
+  width: 95%; 
+  max-width: 420px; /* increased size */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1.2rem;
+  padding: 25px 30px; /* bigger padding */
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+/* Search Box */
+.search {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+}
+
+.search button {
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 20%;
+  background: #ebfffc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  /* margin-left: 150px;
+  margin-top: 20px; */
+}
+
+.search button:hover {
+  transform: scale(1.1);
+}
+
+/* Weather Info */
+.weather-icon {
+  width: 100px;
+  margin: 18px auto;
+}
+
+.weather h1 {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.weather h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+
+
+.details {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 42px;              
+  margin-top: 48px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+
+.humidity,
+.wind {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Hidden by default */
+.weather {
+  display: none;
+}
+
+/* Responsive tweaks */
+@media (max-height: 600px) {
+  .card {
+    padding: 18px 22px;
+  }
+
+  .weather h1 {
+    font-size: 28px;
+  }
+
+  .weather h2 {
+    font-size: 16px;
+  }
+
+  .weather-icon {
+    width: 70px;
+  }
+
+  .search input {
+    font-size: 13px;
+  }
+}
+
